@@ -1,0 +1,44 @@
+@media (min-width:576px) {
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    header .navigation .navbar{
+       display: none;
+     }
+     header .navigation .logo h1{
+        font-size: 25px;
+        
+    }
+     header .navigation .side-view button{
+        display: block;
+        
+    }
+     /* ========================== homepage ============================= */
+     .homepage img{
+        height: 400px;
+        width: 100%;
+    }
+     .homepage .homepage-box{
+        width: 100%;
+        top: 100px;
+    }
+    
+    .homepage .homepage-box h1{
+        font-size: 30px;
+        width: 100%;
+        color: white;
+        padding-bottom: 20px;
+    }
+    .homepage .homepage-box .p-line p{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+
+    .homepage .dots{
+        padding: 10px 0px;
+        justify-content: center;
+        gap: 20px;
+    }
+}

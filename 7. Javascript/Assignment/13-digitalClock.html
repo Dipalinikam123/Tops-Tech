@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #08001f,#30197d);
+            color: white;
+            position: relative;
+        }
+        .container{
+            width: 800px;
+            height: 180px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .clock{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(235, 0, 255,0.11);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(40px);
+        }
+        .clock span{
+            font-size: 80px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+        }
+        .clock span::after{
+            font-size: 15px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .hrs::after{
+            content: "HOURS";
+        }
+        .mins::after{
+            content: "MINUTES";
+        }
+        .sec::after{
+            content: "SECONDS";
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="clock">
+                <span class="hrs"> 00 </span>
+                <span> : <span>
+                <span class="mins"> 00 </span>
+                <span> : </span>
+                <span class="sec"> 00 </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let hrs = document.querySelector(".hrs")
+        let min = document.querySelector(".mins")
+        let sec = document.querySelector(".sec")
+
+        setInterval(function() {
+        let currentTime = new Date();
+         hrs.innerHTML = currentTime.getHours();
+         min.innerHTML = currentTime.getMinutes();
+         sec.innerHTML = currentTime.getSeconds();
+        },1000)
+
+       
+    </script>
+</body>
+</html>

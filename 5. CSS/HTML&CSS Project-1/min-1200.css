@@ -1,0 +1,35 @@
+@media (min-width:1200px) {
+    .container{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    header .navigation .navbar ul li a{
+        font-size: 17px;
+       }
+
+/* homepage */
+    .homepage img{
+        height: auto;
+        max-width: 100%;
+    }
+    .homepage .homepage-box{
+        width: 50%;
+        top: 300px;
+    }
+    
+    .homepage .homepage-box h1{
+        font-size: 45px;
+        width: 85%;
+    }
+     .homepage .homepage-box .p-line p{
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+
+    .homepage .dots{
+        padding: 10px 0px;
+        justify-content: end;
+        gap: 10px;
+    }   
+}
