@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         const m
+// {
+//       x= 90
+//       y= 90
+//       z= 90
+//       console.log(x)
+//       console.log(y)
+//       console.log(z)
+//       console.log(m) 
+// } 
+
+// ******************************************************************
+
+// let x = 100
+// var y = 100
+// const z = 100
+// const m
+// {
+//       x= 90
+//       y= 90
+//       z= 90
+//       console.log(x)
+//       console.log(y)
+//       console.log(z)
+//       console.log(m) 
+// } 
+
+// console.log(x)
+// console.log(y)
+// console.log(z)
+
+// ******************************************************************
+
+// console.log(x)
+// console.log(y)
+// console.log(z)
+
+// {
+//       let x = 100
+//       var y = 100
+//       const z = 100
+// }
+
+// console.log(x)
+// console.log(y)
+// console.log(z)
+
+// ******************************************************************
+
+let array =[1,2,3,4,5,6,7,8,9,10]
+ 
+// let subarry= array.slice(9,10)
+// console.log(subarry);
+
+// for( i=0; i<array; i++)
+// {
+//     console.log("hello" +i);
+// }
+
+// let mapMethod =array.map((e)=>{
+//     return e
+// })
+//console.log(mapMethod);
+
+array.splice(6,1,"100")
+console.log(array);
+
+// let filterData = array.filter((ele) =>  ele <array "100")
+// console.log("index" + filterData.length)
+
+let mapMethod =array.map((e)=>{
+    return e + 1
+})
+console.log(mapMethod);
+
+array.splice(0,0,"0")
+console.log(array);
+
+array.splice(11,1,"99")
+console.log(array);
+
+array.splice(0,1)
+console.log(array);
+
+array.splice(-1,1)
+console.log(array);
+
+
+// let total =0;
+// for(let i=0; i<array.length; i++)
+// {
+//     total+= parseInt(array[i]);
+//     console.log("for loop sum" + total);
+
+// }
+
+
+// let redData= array.reduce((lrv,e)=>{
+//     console.log(lrv,e);
+//     return parseInt(e) + lrv
+// })
+// console.log("addition is" + redData);
+
+let sum = 0;
+        let mapAdd= array.map((e) =>{
+        return sum =sum + e
+        })
+        console.log("Map addition is" + sum);
+
+ array.sort((a,b) => a-b)
+ console.log(array);
+
+ array.sort((a,b) => b-a)
+ console.log(array);
+
+ let reversearr =array.reverse()
+ console.log(reversearr);
+
+
+ for(let i=array.length; i>=0; i--)
+{
+    console.log(array[i]);
+}
+
+
+</script>
+</body>
+</html>
