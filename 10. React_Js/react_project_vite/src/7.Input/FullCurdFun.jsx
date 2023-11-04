@@ -17,26 +17,30 @@ export default function FullCurdFun() {
     let [updateMode, setUpdateMode] = useState(false);
     let [updateIndex, setUpdateIndex] = useState(null);
     let [search,setSearch]=useState("")
+    let [showPass, setShowPass]=useState(false)
 
 
 
     useEffect(() => {
         let jsonData = localStorage.getItem("dataArray")
-        let normalData = JSON.parse(jsonData)
-        setArr(normalData)
+        let normalData = JSON.parse(jsonData) || []
+        // setArr(normalData)
 
         //search
-       let filterData= normalData.filter((e)=> e.email.includes(search.toLowerCase()) || e.age.includes(search))
+       let filterData= normalData?.filter((e)=> e.email.includes(search.toLowerCase()) || e.age.includes(search))
         setArr(filterData)
     }, [search])
-
+     
+    function showPassword(index){
+        setShowPass(!showPass)
+    }
 
     function submitBtn() {
-        console.log(user)
+        // console.log(user)
         if (user.email == "" && user.password == "") 
-            alert("Fill this field first")
+            alert("Fill this field first");
         else
-            setArr([...arr, user])
+            setArr([...arr,user])
 
         localStorage.setItem("dataArray", JSON.stringify([...arr, user]))
 
@@ -156,7 +160,7 @@ export default function FullCurdFun() {
                     <Input
                         id="examplemobile"
                         value={user?.mobile}
-                        name="password"
+                        name="number"
                         placeholder="mobile placeholder"
                         type="password"
                         onChange={(e) => setUser({ ...user, mobile: e?.target?.value })}
@@ -174,8 +178,8 @@ export default function FullCurdFun() {
             </div>
 
             <div className='bg-danger'>
-            <label htmlFor="search"  >Search Here</label><br />
-            <input type="text" onChange={(e)=>setSearch(e?.target?.value)} placeholder='search' />
+            <label htmlFor="search" className='ms-3 fs-4 text-light' >Search Here</label><br />
+            <input type="text" className='w-25 p-1 border rounded m-3 '  onChange={(e)=>setSearch(e?.target?.value)} placeholder='search' />
 
 
             <Table>
@@ -213,14 +217,14 @@ export default function FullCurdFun() {
                     </tr>
                 </thead>
                 <tbody>
-                    {arr.length === 0 ? (
+                    {arr?.length === 0 ? (
                         <tr>
-                            <td colSpan="0" style={{ textAlign: "center" }}>
+                            <td colSpan="9" style={{ textAlign: "center" }}>
                                 Data not found
                             </td>
                         </tr>
                     ) : (
-                        arr.map((e, i) => {
+                        arr?.map((e, i) => {
                             return (
                                 <tr key={i}>
                                     <th scope="row">
@@ -229,11 +233,18 @@ export default function FullCurdFun() {
                                     <td>
                                         {e.email}
                                     </td>
-                                    <td>
+                                    {/* <td>
                                         {e.password}
+                                    </td> */}
+                                    <td>
+                                        {showPass ? e.password : '********'}
                                     </td>
                                     <td>
-                                    <Eye color="#732121" role='button' onClick={() =>showPass()} />
+                                        <Eye
+                                            color="#732121"
+                                            role="button"
+                                            onClick={(i) =>showPassword(i)}
+                                        />
                                     </td>
                                     <td>
                                         {e.age}

@@ -1,7 +1,9 @@
 
-import ListView from './1.Assignment/ListView'
-import UseState from './1.Assignment/UseState'
-import Webpage from './2.Styling/Webpage'
+import ListView from './01. Assignment/ListView'
+import UseState from './01. Assignment/UseState'
+import Webpage from './02.Styling_Assignment/Webpage'
+import ToDoList from './03. ClassTasK/ToDoList'
+import FullCurdFun from './7.Input/FullCurdFun'
 import './App.css'
 
 function App() {
@@ -12,7 +14,9 @@ function App() {
     {/* <UseState/> */}
     {/* </div> */}
     {/* <Webpage/> */}
-    <ListView/>
+    {/* <ListView/> */}
+    {/* <FullCurdFun/> */}
+    <ToDoList/>
     </>
   )
 }
