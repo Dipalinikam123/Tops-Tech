@@ -64,7 +64,7 @@ function blurEvent(){
       onChange={(e)=>print(e)}
     />
   </FormGroup>
-  {/* <FormGroup>
+  <FormGroup>
     <Label for="examplePassword">
       Password
     </Label>
@@ -74,7 +74,7 @@ function blurEvent(){
       placeholder="password placeholder"
       type="password"
     />
-  </FormGroup> */}
+  </FormGroup>
   <Button color='success w-100' onClick={()=>display()}>submit</Button>
   </Form>
 <Button className='my-5 mx-5' color='danger' onClick={()=>deleteAll()}>DeleteALL</Button>

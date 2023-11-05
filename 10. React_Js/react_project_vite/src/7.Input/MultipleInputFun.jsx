@@ -72,7 +72,7 @@ function submitBtn(){
       onChange={(e)=> setUser({...user,email:e?.target?.value})}
     />
   </FormGroup>
-  {/* <FormGroup>
+  <FormGroup>
     <Label for="examplePassword">
       Password
     </Label>
@@ -125,7 +125,7 @@ function submitBtn(){
       type="password"
       onChange={(e)=>setUser({...user,mobile:e?.target?.value})}
     />
-  </FormGroup> */}
+  </FormGroup>
 
   <Button className='w-100 bg-success-' onClick={()=>submitBtn()}>Submit</Button>
   </Form>
