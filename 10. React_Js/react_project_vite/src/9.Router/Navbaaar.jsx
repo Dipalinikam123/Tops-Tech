@@ -23,13 +23,15 @@ export default function Navbaaar() {
   return (
     <div className='w-100 d-flex justify-content-center'>
       <Navbar expand="lg">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='d-flex '>
           <Nav className="me-auto d-flex gap-4" navbar>
             <NavItem><NavLink to={""}>HOME</NavLink></NavItem>
             <NavItem><NavLink to={"/service"}>SERVICE</NavLink></NavItem>
-            <NavItem><NavLink to={"/contact"}>CONTACT US</NavLink></NavItem> 
+            <NavItem><NavLink to={"/contact"}>CONTACT US</NavLink></NavItem>
+            <NavItem><NavLink to={"/product"}>PRODUCT</NavLink></NavItem> 
+
           </Nav>
           <NavbarText></NavbarText>
         </Collapse>

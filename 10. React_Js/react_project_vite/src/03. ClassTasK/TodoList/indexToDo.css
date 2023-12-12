@@ -70,23 +70,27 @@ button:hover{
     background-color: green;
 }
 
-ol li{
+td{
     text-align: left;
     margin-left: 10px;
     font-size: 21px;
-    color: rgb(112, 53, 135);   
+    color: rgb(112, 53, 135) !important;   
     font-weight: 600;
     text-transform: capitalize;
-    
 }
-ol li .icon{
+.icon{
     color: green !important;
     margin-left: 28px;
     margin-right: 10px;
 }
-ol li .icon:hover{
+ .icon:hover{
     color: red !important;
 }
- ol li .icon:hover .line{
-   text-decoration: line-through !important;
+.icon:hover{
+    text-decoration: line-through;
+}
+ .line2{
+    color: green !important;
+    margin-right: 20px !important;
+
 } */
