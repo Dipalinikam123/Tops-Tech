@@ -28,9 +28,9 @@ function App() {
     {/* =================================== */}
     {/* <MultiplePasswordShow/> */}
     {/* ===================================== */}
-    {/* <RouterPage/> */}
+    <RouterPage/>
     {/* ===================================== */}
-    <RadioButtonCurd/>
+    {/* <RadioButtonCurd/> */}
     </>
   )
 }
