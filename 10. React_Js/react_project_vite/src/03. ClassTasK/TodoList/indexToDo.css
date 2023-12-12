@@ -38,7 +38,7 @@ h1{
     background-color: transparent;
     margin-top: 20px !important;
 }
-input{
+.box-div .in-put{
     text-align: center;
     height: 30px;
     top: 10px;
@@ -54,22 +54,33 @@ input{
 input::placeholder{
     font-size: 20px;
 }
-button{
+.box-div .btn{
     height: 35px;
     width: 35px;
     border-radius: 40px !important;
     text-align: center;
     background-color: rgb(112, 53, 135);
     color: white;
-    font-size: 20px !important;
+    font-size: 15px !important;
     font-weight: 900 !important;
     margin-left: 10px !important;
     box-shadow:  5px 5px 25px -5px rgba(0,0,0,0.5);
 }
-button:hover{
+.box-div .btn:hover{
     background-color: green;
 }
 
+.box-2 .btn5{
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    border: transparent;
+    border-radius: 10px;
+    
+}
 td{
     text-align: left;
     margin-left: 10px;
@@ -91,6 +102,6 @@ td{
 }
  .line2{
     color: green !important;
-    margin-right: 20px !important;
+    margin-right: 10px !important;
 
 } */

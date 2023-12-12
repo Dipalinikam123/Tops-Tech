@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "../0.Images/contact.jpeg"
+import image from "../../../0.Images/contact.jpeg"
 
 export default function Contact() {
   return (

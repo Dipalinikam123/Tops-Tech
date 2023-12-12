@@ -1,14 +1,17 @@
-import React from 'react'
-import  Contact from './Contact'
-import  Home from './Home'
-import Service from './Service'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
-import PageNotFound from './PageNotFound'
-import Navbaaar from './Navbaaar'
-import Car from './Car'
-import Bike from './Bike'
-import Product from './10.Product_s/Product'
-import SinglePage from './10.Product_s/SinglePage'
+
+import React from 'react'
+
+import Home from './Ui/Pages/Home';
+import Contact from './Ui/Pages/Contact';
+import Service from './Ui/Pages/Service';
+import Car from './Ui/Pages/Car';
+import Bike from './Ui/Pages/Bike';
+import PageNotFound from './Ui/Pages/PageNotFound';
+import Navbaaar from './Ui/Componants/NavBar/Navbaaar';
+import SinglePage from './Product_s/SinglePage';
+import Product from './Product_s/Product';
+import Footer from './Ui/Componants/Footer/Footer';
 
 export default function RouterPage() {
   return (
@@ -25,9 +28,7 @@ export default function RouterPage() {
     <Route path='/singlepage/:id' element={<SinglePage/>}/>
     <Route path='*' Component={PageNotFound}/>
   </Routes>
-  {/* <Home/>
-  <Contact/>
-  <Service/> */}
+    <Footer/>
 </BrowserRouter>
     </>
   );

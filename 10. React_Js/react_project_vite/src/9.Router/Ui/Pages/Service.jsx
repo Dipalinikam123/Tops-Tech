@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import image from "../0.Images/service.jpeg"
+import image from "../../../0.Images/service.jpeg"
 import { Button } from 'react-bootstrap'
 
 
