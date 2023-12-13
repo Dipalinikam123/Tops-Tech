@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { ArrowUpToLine, CheckCircle } from "lucide-react";
-import { Button, Input, Table } from "reactstrap";
+import {Input, Table } from "reactstrap";
 import "../TodoList/indexToDo.css";
 
 export default function ToDoList() {
@@ -13,6 +13,7 @@ export default function ToDoList() {
   let [userArr, setUserArr] = useState([]);
   let [buttn, setButn] = useState(false);
   let [check, setCheck] = useState([])
+  let [checkArr, setCheckArr]=useState([])
 
   useEffect(() => {
     const data = localStorage.getItem("fullData");
@@ -67,9 +68,15 @@ export default function ToDoList() {
   //lineRef.current.style.textDecoration="line-through";
   // let lineTh= userArr.filter((e,i)=> i !== index)
   // }
+  function getData(ele){
+    // console.log("ele======",ele)
 
+   setCheck([ele])
+   console.log("check======",check)
+  }
+  
   function checkeed(){
-   console.log(check)  
+    setCheckArr([...checkArr,check])
   }
 
   return (
@@ -126,16 +133,19 @@ export default function ToDoList() {
                         id="checkbox1"
                         value="Reading"
                         checked={check.includes(e)}
-                        onChange={() => setCheck([...check,e]) }
+                        onChange={() =>getData(e)}
                       />
                     </td>
                   </tr>
                 );
-              })}
+              })}                 
             </tbody>
           </Table>
         </div>
-      </div>
+            
+
+      
+      </div> 
     </>
   );
 }

@@ -13,31 +13,24 @@ import {
 } from "reactstrap";
 
 export default function RegistrationModel({ toggle, modal }) {
-  let [user, setUser] = useState({
-    name: "",
-    email: "",
-    number: "",
-    age: "",
-  });
+const initilization= {
+  name: "",
+  email: "",
+  number: "",
+  age: "",
+}
 
-  let [regArr, setRegArr] = useState([]);
+  let [user, setUser] = useState(initilization)
 
-  function submitBtn() {
-    if (user.email == "" && user.name == "") {
-      alert("Fill this field first");
-    } else {
-      toggle();
-      setRegArr([...regArr, user]);
+
+  function submitBtn(e) {
+    e.preventDefault()
       console.log("========",user)
-    }
-
+      localStorage.setItem("user",JSON.stringify(user))
+    
     // on click input in his initial state
-    setUser({
-      name: "",
-      email: "",
-      number: "",
-      age: "",
-    });
+    setUser(initilization);
+    toggle();
   }
   return (
     <div>
@@ -117,7 +110,7 @@ export default function RegistrationModel({ toggle, modal }) {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={()=>submitBtn()}>
+          <Button color="primary" onClick={(e)=>submitBtn(e)}>
             Login
           </Button>
           <Button color="secondary" onClick={toggle}>

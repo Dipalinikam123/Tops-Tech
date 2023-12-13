@@ -12,6 +12,8 @@ import Navbaaar from './Ui/Componants/NavBar/Navbaaar';
 import SinglePage from './Product_s/SinglePage';
 import Product from './Product_s/Product';
 import Footer from './Ui/Componants/Footer/Footer';
+import Profile from './Ui/Pages/Profile';
+import ProtectedRouter from './ProtectedRouter';
 
 export default function RouterPage() {
   return (
@@ -19,13 +21,14 @@ export default function RouterPage() {
     <BrowserRouter>
       <Navbaaar/>
   <Routes>
-    <Route path='' element={<Home/>}/>
+    <Route path='/' element={<Home/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/service' element={<Service/>}/>
     <Route path='/service/car' element={<Car/>}/>
     <Route path='/service/bike' element={<Bike/>}/>
     <Route path='/product' element={<Product/>}/>
     <Route path='/singlepage/:id' element={<SinglePage/>}/>
+    <Route path='/profile' element={<ProtectedRouter componant={<Profile/>}/>}/>
     <Route path='*' Component={PageNotFound}/>
   </Routes>
     <Footer/>
