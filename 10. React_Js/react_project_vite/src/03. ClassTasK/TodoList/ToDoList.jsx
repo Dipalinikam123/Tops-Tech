@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { ArrowUpToLine, CheckCircle } from "lucide-react";
-import {Input, Table } from "reactstrap";
-import "../TodoList/indexToDo.css";
+import { Input, Table } from "reactstrap";
+import './indexToDo.css'
 
 export default function ToDoList() {
   let lineRef = useRef();
@@ -13,7 +13,7 @@ export default function ToDoList() {
   let [userArr, setUserArr] = useState([]);
   let [buttn, setButn] = useState(false);
   let [check, setCheck] = useState([])
-  let [checkArr, setCheckArr]=useState([])
+  let [checkArr, setCheckArr] = useState([])
 
   useEffect(() => {
     const data = localStorage.getItem("fullData");
@@ -64,19 +64,19 @@ export default function ToDoList() {
     confirm("Are you sure") && setUserArr(removeData);
     localStorage.setItem("fullData", JSON.stringify(removeData));
   }
-  // const lineTh = ()=>{
-  //lineRef.current.style.textDecoration="line-through";
-  // let lineTh= userArr.filter((e,i)=> i !== index)
-  // }
-  function getData(ele){
-    // console.log("ele======",ele)
 
-   setCheck([ele])
-   console.log("check======",check)
+  function handleCheckboxChange(item) {
+    if (check.includes(item)) {
+      let updatedCheck = check.filter(e => e !== item);
+      setCheck(updatedCheck);
+    } else {
+      setCheck([...check, item]);
+    }
   }
-  
-  function checkeed(){
-    setCheckArr([...checkArr,check])
+
+  function checkeed() {
+    console.log("====check", check)
+    setCheckArr([...checkArr, check])
   }
 
   return (
@@ -102,9 +102,9 @@ export default function ToDoList() {
             <button className="btn" onClick={() => getDataBtn()}> + </button>
           )}
 
-            <div className="box-2">
-                <button className="btn5" onClick={checkeed}>Checked</button>
-            </div>
+          <div className="box-2">
+            <button className="btn5" onClick={checkeed}>Checked</button>
+          </div>
           <Table>
             <tbody>
               {userArr?.map((e, i) => {
@@ -131,21 +131,48 @@ export default function ToDoList() {
                       <Input
                         type="checkbox"
                         id="checkbox1"
-                        value="Reading"
-                        checked={check.includes(e)}
-                        onChange={() =>getData(e)}
+                        onChange={() => handleCheckboxChange(e)}
                       />
                     </td>
                   </tr>
                 );
-              })}                 
+              })}
             </tbody>
           </Table>
         </div>
-            
 
-      
-      </div> 
+        <div className="tableDiv w-25">
+          <Table>
+
+          <thead>
+                    <tr>
+                        <th>
+                           checked List
+                        </th>
+                      </tr>
+            </thead>
+            <tbody>
+
+              { checkArr?.length === 0 ? (
+                <tr>
+                    <td colSpan="9" style={{ textAlign: "center" }}>
+                        Data not Found
+                    </td>
+                </tr>
+                ): (
+                    checkArr?.map((e, i) => {
+                      return (
+                        <tr key={i}>
+                          <td  style={{ textAlign: "center" }}>{e.join('-')} </td>
+                        </tr>
+                      );
+                      })
+              )
+            }
+            </tbody>
+          </Table>
+        </div>
+      </div>
     </>
   );
 }

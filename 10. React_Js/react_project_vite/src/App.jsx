@@ -4,6 +4,9 @@ import UseState from './01. Assignment/UseState'
 import Webpage from './02.Styling_Assignment/Webpage'
 import MultiplePasswordShow from './03. ClassTasK/MultiplePasswordShow'
 import ToDoList from './03. ClassTasK/TodoList/ToDoList'
+import TaskUseReducer from './10.Hooks/UseReducer/TaskUseReducer'
+import UseReducer from './10.Hooks/UseReducer/UseReducer'
+import UserReducer from './10.Hooks/UseReducer/UserReducer'
 // import ToDoList from './03. ClassTasK/ToDoList'
 import FullCurdFun from './7.Input/FullCurdFun'
 import RadioButtonCurd from './7.Input/RadioButtonCurd'
@@ -28,9 +31,15 @@ function App() {
     {/* =================================== */}
     {/* <MultiplePasswordShow/> */}
     {/* ===================================== */}
-    <RouterPage/>
+    {/* <RouterPage/> */}
     {/* ===================================== */}
     {/* <RadioButtonCurd/> */}
+    {/* ===================================== */}
+    {/* <UseReducer/> */}
+    {/* ===================================== */}
+      {/* <TaskUseReducer/> */}
+    {/* ===================================== */}
+    <UserReducer/>
     </>
   )
 }
