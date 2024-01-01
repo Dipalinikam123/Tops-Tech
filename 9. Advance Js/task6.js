@@ -3,7 +3,7 @@ let PROMISE = new Promise((resolve,reject) => {
 
     if (true) {
         setTimeout(() => {
-            resolve({name:"Pavan"})
+            resolve({name:"vaishali"})
         }, 3000);
     }
     else {
@@ -12,7 +12,7 @@ let PROMISE = new Promise((resolve,reject) => {
 });
 PROMISE.then((name) => {
     console.log("Name-->", name);
-    return { ...name, surname: "Patil" }
+    return { ...name, surname: "nikam" }
 })
 .then((Surname) => {
     setTimeout(() => {

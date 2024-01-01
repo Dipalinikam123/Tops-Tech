@@ -1,5 +1,5 @@
 // let hello = ()=> {
-//  return "dipali chipkali aahe "
+//  return "hello developer "
 // }
 
 // console.log("🚀 ~ file: arrow.js:2 ~ dipali chhakuli aahe:", hello())

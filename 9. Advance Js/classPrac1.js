@@ -7,5 +7,5 @@ class Employee {
         console.log("Name......",this.id, this.name);
     }
   };
-  var emp = new Employee(3,"pavan")
+  var emp = new Employee(3,"vaishali")
   emp.Fbh();

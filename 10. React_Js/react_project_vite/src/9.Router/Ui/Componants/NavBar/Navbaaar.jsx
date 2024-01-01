@@ -1,45 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Button,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../NavBar/navbar.css";
 import RegistrationModel from "../../ModelLogin/RegistrationModel";
 import { User } from "lucide-react";
+import LoginModel from "../../ModelLogin/LoginModel";
+import { toast } from "react-toastify";
 
 export default function Navbaaar() {
+  const [logModal, setlogModal] = useState(false);
   const [regModal, setRegModal] = useState(false);
-  const regToggle = () => setRegModal(!regModal);
+  let [refresh, setRefresh] = useState(false);
+  let [loginData, setLoginData] = useState();
 
-  const regData = JSON.parse(localStorage.getItem("user"));
-  console.log("=========", regData);
+  const navigate = useNavigate();
+  const logData = JSON.parse(localStorage.getItem("user")) || {};
+  useEffect(() => {
+    setLoginData(logData);
+  }, [logData]);
 
   const logoutFun = () => {
     localStorage.setItem("user", JSON.stringify({}));
-    setRegModal(true);
+    toast.success("LogOut successfully");
+    setRefresh(true);
+    navigate("/");
   };
 
+  const logToggle = () => setlogModal(!logModal);
+  const regToggle = () => setRegModal(!regModal);
   return (
     <>
       <RegistrationModel modal={regModal} toggle={regToggle} />
+      <LoginModel modal={logModal} toggle={logToggle} />
       <div
         className="w-100 d-flex align-items-center p-3"
-        style={{ background: "linear-gradient(0,lightBlue,black)" }}
+        style={{ backgroundColor: "black" }}
       >
         <div
           className=" d-flex justify-content-start "
-          style={{ color: "purple", textShadow: "2px 2px 2px white" }}
+          style={{ color: "black", textShadow: "4px 3px 3px white" }}
         >
           <h1>LOGO</h1>
         </div>
@@ -62,6 +68,11 @@ export default function Navbaaar() {
                 <NavItem>
                   <NavLink to={"/product"}>PRODUCT</NavLink>
                 </NavItem>
+                <NavItem>
+                  {loginData?.loginType === "Admin" && (
+                    <NavLink to={"/admin"}>ADMIN</NavLink>
+                  )}
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
@@ -71,7 +82,7 @@ export default function Navbaaar() {
             <User className="text-light border border-2 rounded" />
           </NavLink>
 
-          {Object.keys(regData).length > 0 ? (
+          {loginData && Object.keys(loginData).length > 0 ? (
             <Button
               style={{
                 backgroundColor: "red",
@@ -83,16 +94,22 @@ export default function Navbaaar() {
               Log-Out
             </Button>
           ) : (
-            <Button
-              style={{
-                backgroundColor: "red",
-                width: "120px",
-                fontWeight: "700",
-              }}
-              onClick={regToggle}
-            >
-              Login
-            </Button>
+            <>
+              {/* <Button className="bg-danger" onClick={regToggle}>
+            Register
+          </Button>
+             */}
+              <Button
+                style={{
+                  backgroundColor: "red",
+                  width: "120px",
+                  fontWeight: "700",
+                }}
+                onClick={logToggle}
+              >
+                Login
+              </Button>
+            </>
           )}
         </div>
       </div>

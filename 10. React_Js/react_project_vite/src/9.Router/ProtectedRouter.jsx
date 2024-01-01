@@ -7,11 +7,12 @@ export default function ProtectedRouter({componant}) {
     useEffect(()=>{
         let data= localStorage.getItem("user")
         let normalData = JSON.parse(data)
-        Object.keys(normalData)
+        console.log(normalData)
+        // Object.keys(normalData)
 
-        if ( Object.keys(normalData).length ===0) {
-            alert("You need to Login")
-            navigate("/pagenotfound")
+        if (!normalData || Object.keys(normalData).length ===0) {
+            alert("You need to Register")
+            navigate("/unauthorized")
         }
     })
   return (

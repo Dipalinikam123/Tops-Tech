@@ -37,6 +37,7 @@ function ChangeValue(a) {
   console.log("chnVal:", arr)
 }
 ChangeValue(6)
+
 // 4. print a array till element value not grater then 100
 function GraterValue(a) {
   for (let i = 0; i < arr.length; i++) {

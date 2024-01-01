@@ -2,25 +2,22 @@ import React, { useReducer, useState } from "react";
 import { Button } from "reactstrap";
 
 export default function TaskUseReducer() {
-    const [valueA, setvalueA] = useState();
-    const [valueB, setvalueB] = useState();
+  const [valueA, setvalueA] = useState();
+  const [valueB, setvalueB] = useState();
 
-    function reducer(state, action) {
-      console.log("state", state);
-      console.log("action", action);
-      if (action === "sum") {
-        return {ans:state.parseInt(valueA)+state.parseInt(valueB)}
-      }
-      else if(action === "sub"){
-        return {ans:parseInt(valueA)-parseInt(valueB)}
-      } 
-      else if(action === "multi"){
-        return {ans:parseInt(valueA)*parseInt(valueB)}
-      }
-      else if(action === "div"){
-        return {ans:parseInt(valueA)/parseInt(valueB)}
-      }
+  function reducer(state, action) {
+    console.log("state", state);
+    console.log("action", action);
+    if (action === "sum") {
+      return { ans: parseInt(valueA) + parseInt(valueB) };
+    } else if (action === "sub") {
+      return { ans: parseInt(valueA) - parseInt(valueB) };
+    } else if (action === "multi") {
+      return { ans: parseInt(valueA) * parseInt(valueB) };
+    } else if (action === "div") {
+      return { ans: parseInt(valueA) / parseInt(valueB) };
     }
+  }
 
   let [task, setTask] = useReducer(reducer, { ans: "not selected" });
 
@@ -43,13 +40,19 @@ export default function TaskUseReducer() {
         onChange={(e) => setvalueB(e?.target?.value)}
       />
       <br />
-     
-      <Button color="danger me-3 mt-3" onClick={() => setTask("sum")}>Add</Button>
-      <Button color="danger me-3 mt-3" onClick={() => setTask("sub")}>sub</Button>
-      <Button color="danger me-3 mt-3" onClick={() => setTask("multi")}>Multi</Button>
-      <Button color="danger me-3 mt-3" onClick={() => setTask("div")}>Div</Button>
-    
 
+      <Button color="danger me-3 mt-3" onClick={() => setTask("sum")}>
+        Add
+      </Button>
+      <Button color="danger me-3 mt-3" onClick={() => setTask("sub")}>
+        sub
+      </Button>
+      <Button color="danger me-3 mt-3" onClick={() => setTask("multi")}>
+        Multi
+      </Button>
+      <Button color="danger me-3 mt-3" onClick={() => setTask("div")}>
+        Div
+      </Button>
 
       <h1>Ans is {task?.ans} </h1>
     </>

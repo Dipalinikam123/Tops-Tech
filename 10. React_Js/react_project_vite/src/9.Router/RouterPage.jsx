@@ -14,6 +14,11 @@ import Product from './Product_s/Product';
 import Footer from './Ui/Componants/Footer/Footer';
 import Profile from './Ui/Pages/Profile';
 import ProtectedRouter from './ProtectedRouter';
+import Admin from './Ui/Pages/Admin';
+import CheckAdminRouter from './CheckAdminRouter';
+import Unauthorized from './Ui/Pages/Unauthorized';
+
+
 
 export default function RouterPage() {
   return (
@@ -29,6 +34,8 @@ export default function RouterPage() {
     <Route path='/product' element={<Product/>}/>
     <Route path='/singlepage/:id' element={<SinglePage/>}/>
     <Route path='/profile' element={<ProtectedRouter componant={<Profile/>}/>}/>
+    <Route path='/admin' element={<CheckAdminRouter componant= {<Admin/>}/>}/>
+    <Route path='/unauthorized' element={<Unauthorized/>}/>
     <Route path='*' Component={PageNotFound}/>
   </Routes>
     <Footer/>
