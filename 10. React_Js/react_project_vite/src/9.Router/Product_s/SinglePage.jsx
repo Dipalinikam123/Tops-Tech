@@ -17,6 +17,7 @@ export default function SinglePage() {
     url:`https://fakestoreapi.com/products/${urldata.id}`, //id is path of singlepage / u can use any name there(:id)
    })
    .then((res)=>{
+    
        console.log("=====",res.data)
        setProduct(res?.data)
     })

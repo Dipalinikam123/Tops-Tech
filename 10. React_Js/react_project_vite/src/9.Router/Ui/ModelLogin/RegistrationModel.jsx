@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 // import GoToLogin from "../Pages/GoToLogin";
 
-export default function RegistrationModel({ modal, toggle }) {
+export default function RegistrationModel({ modal, toggle, logToggle }) {
   const initilization = {
     name: "",
     email: "",
@@ -59,6 +59,10 @@ export default function RegistrationModel({ modal, toggle }) {
       setNewUser(initilization);
       toggle();
     }
+  }
+  const loginToggle=()=>{
+    toggle()
+    logToggle()
   }
 
   return (
@@ -169,13 +173,13 @@ export default function RegistrationModel({ modal, toggle }) {
             Cancel
           </Button>
         </ModalFooter>
-        {/* <p
+        <p
           className="text-primary ms-4"
           role="button"
-          onClick={() => logToggle()}
+          onClick={() => loginToggle()}
         >
           Login here ....
-        </p> */}
+        </p>
       </Modal>
     </div>
   );

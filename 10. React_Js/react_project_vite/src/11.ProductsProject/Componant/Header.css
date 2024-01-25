@@ -1,0 +1,12 @@
+ul{
+    list-style: none;
+}
+.nav-item a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+a.active{
+    color: aliceblue;
+    font-weight: 700;
+}

@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <footer
         className="font-small blue pt-4 text-light"
-        style={{ marginTop: "350px",backgroundColor:"black" }}
+        style={{ marginTop: "350px",background:"linear-gradient(90deg, hsla(211, 96%, 62%, 1) 0%, hsla(295, 94%, 76%, 1) 100%)" }}
       >
         <div className="container-fluid text-center text-md-left">
           <div className="row">
@@ -29,22 +29,22 @@ export default function Footer() {
               <ul className="list-unstyled d-flex gap-3 align-items-center justify-content-center">
                 <li>
                   <a href="">
-                    <Instagram className="bg-danger" />
+                    <Instagram />
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <Facebook className="bg-danger" />
+                    <Facebook />
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <Twitter className="bg-danger" />
+                    <Twitter />
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <Aperture className="bg-danger" />
+                    <Aperture />
                   </a>
                 </li>
               </ul>

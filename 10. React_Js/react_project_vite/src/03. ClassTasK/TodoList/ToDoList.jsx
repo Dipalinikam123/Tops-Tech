@@ -67,7 +67,7 @@ export default function ToDoList() {
 
   function handleCheckboxChange(item) {
     if (check.includes(item)) {
-      let updatedCheck = check.filter(e => e !== item);
+      let updatedCheck = check.filter(e => e !== item); //check.map(()) setCheck([...check]) try
       setCheck(updatedCheck);
     } else {
       setCheck([...check, item]);
@@ -128,7 +128,7 @@ export default function ToDoList() {
                       />
                     </td>
                     <td>
-                      <Input
+                      <Input check
                         type="checkbox"
                         id="checkbox1"
                         onChange={() => handleCheckboxChange(e)}

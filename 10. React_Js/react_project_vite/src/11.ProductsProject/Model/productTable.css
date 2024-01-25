@@ -1,0 +1,11 @@
+
+.table thead{
+--bs-table-bg: rgb(253, 181, 181);
+
+}
+.modal-content {
+    width: 130%;  
+}
+label{
+    margin: 7px 0;
+}

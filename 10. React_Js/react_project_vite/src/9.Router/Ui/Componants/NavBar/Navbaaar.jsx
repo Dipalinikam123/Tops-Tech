@@ -18,13 +18,13 @@ export default function Navbaaar() {
   const [logModal, setlogModal] = useState(false);
   const [regModal, setRegModal] = useState(false);
   let [refresh, setRefresh] = useState(false);
-  let [loginData, setLoginData] = useState();
+  // let [loginData, setLoginData] = useState();
 
   const navigate = useNavigate();
   const logData = JSON.parse(localStorage.getItem("user")) || {};
-  useEffect(() => {
-    setLoginData(logData);
-  }, [logData]);
+  // useEffect(() => {
+  //   setLoginData(logData);
+  // }, [logData]);
 
   const logoutFun = () => {
     localStorage.setItem("user", JSON.stringify({}));
@@ -37,11 +37,11 @@ export default function Navbaaar() {
   const regToggle = () => setRegModal(!regModal);
   return (
     <>
-      <RegistrationModel modal={regModal} toggle={regToggle} />
-      <LoginModel modal={logModal} toggle={logToggle} />
+      <RegistrationModel modal={regModal} toggle={regToggle} logToggle={logToggle} />
+      <LoginModel modal={logModal} toggle={logToggle} regToggle={regToggle} />
       <div
         className="w-100 d-flex align-items-center p-3"
-        style={{ backgroundColor: "black" }}
+        style={{ background: "linear-gradient(90deg, hsla(211, 96%, 62%, 1) 0%, hsla(295, 94%, 76%, 1) 100%)" }}
       >
         <div
           className=" d-flex justify-content-start "
@@ -69,7 +69,7 @@ export default function Navbaaar() {
                   <NavLink to={"/product"}>PRODUCT</NavLink>
                 </NavItem>
                 <NavItem>
-                  {loginData?.loginType === "Admin" && (
+                  {logData?.loginType === "Admin" && (
                     <NavLink to={"/admin"}>ADMIN</NavLink>
                   )}
                 </NavItem>
@@ -82,10 +82,11 @@ export default function Navbaaar() {
             <User className="text-light border border-2 rounded" />
           </NavLink>
 
-          {loginData && Object.keys(loginData).length > 0 ? (
+          {logData && Object.keys(logData).length > 0 ? (
             <Button
               style={{
                 backgroundColor: "red",
+                borderColor:"red",
                 width: "120px",
                 fontWeight: "700",
               }}
@@ -102,6 +103,7 @@ export default function Navbaaar() {
               <Button
                 style={{
                   backgroundColor: "red",
+                  borderColor:"red",
                   width: "120px",
                   fontWeight: "700",
                 }}

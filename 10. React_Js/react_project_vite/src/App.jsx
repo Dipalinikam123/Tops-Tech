@@ -7,6 +7,7 @@ import ToDoList from './03. ClassTasK/TodoList/ToDoList'
 import TaskUseReducer from './10.Hooks/UseReducer/TaskUseReducer'
 import UseReducer from './10.Hooks/UseReducer/UseReducer'
 import UserReducer from './10.Hooks/UseReducer/UserReducer'
+import ProductApiRouter from './11.ProductsProject/ProductApiRouter'
 import CheckBoxValue from './7.Input/CheckBoxValue'
 // import ToDoList from './03. ClassTasK/ToDoList'
 import FullCurdFun from './7.Input/FullCurdFun'
@@ -28,11 +29,12 @@ function App() {
     {/* =================================== */}
     {/* <FullCurdFun/> */}
     {/* =================================== */}
-    <ToDoList/>
+    {/* <ToDoList/> */}
     {/* =================================== */}
     {/* <MultiplePasswordShow/> */}
     {/* ===================================== */}
     {/* <RouterPage/> */}
+      <ProductApiRouter/>
     {/* ===================================== */}
     {/* <RadioButtonCurd/> */}
     {/* ===================================== */}

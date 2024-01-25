@@ -15,19 +15,17 @@ import {
 import RegistrationModel from "./RegistrationModel";
 import { toast } from "react-toastify";
 
-export default function LoginModel({ modal, toggle }) {
+export default function LoginModel({ modal, toggle,regToggle }) {
   const initilization = {
     email: "",
     password: "",
   };
   let [user, setUser] = useState(initilization);
-  const [regModal, setRegModal] = useState(false);
-  const regToggle = () => setRegModal(!regModal);
 
   function submitBtn(e) {
     e.preventDefault();
 
-    let newUsrget = JSON.parse(localStorage.getItem("newuser")) || "[]";
+    let newUsrget = JSON.parse(localStorage.getItem("newuser")) || [];
 
     if (newUsrget?.length === 0){
       alert("Data not found..! Need to Registration") 
@@ -65,7 +63,6 @@ export default function LoginModel({ modal, toggle }) {
   }
   return (
     <div>
-      <RegistrationModel modal={regModal} toggle={regToggle} />
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Login Page</ModalHeader>
         <ModalBody>
