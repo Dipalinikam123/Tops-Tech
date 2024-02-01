@@ -1,0 +1,42 @@
+/* .carousel-inner{
+    width: 600px !important;
+    height: 350px !important;
+    overflow: hidden;
+    background-color: aqua;
+
+}
+.custom-tag{
+    width: 600px !important;
+    height: 350px !important;
+}
+.custom-tag img{
+    width: 600px !important;
+    height: 350px !important;
+}
+
+.custom-tag:hover{
+    transform: scale(1.2);
+    transition: 1s all ease-in-out;
+}
+.carousel-indicators{
+    display: none;
+}
+.carousel-control-prev span, .carousel-control-next span{
+    background-color: black;
+    border-radius: 50%;
+    padding: 13px;
+}
+
+.right-div{
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+}
+.right-img:hover{
+    transform: scale(1.2);
+    transition: 1s all ease-in-out;
+}
+.right-img{
+    width: 600px;
+    height: 350px;
+} */

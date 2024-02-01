@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+    .content {
+      margin: 15px 50px;
+      width: 100%;
+    }
+    
+    .notebook-page {
+      padding: 0px 17px;
+     
+      width: 100%;
+    
+      background-color: #fff;
+     
+      background-size: 100% 2em;
+      position: relative;
+      height: 600px;
+      box-shadow: 0 9px 20px rgba(0, 0, 0, 0.1);
+      &:after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #ef5350;
+      }
+      .text-edit {
+        display: block;
+      }
+    }
+    
+    #msg {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #111;
+      font-size: 24px;
+      height: 450px;
+      resize: none;
+      line-height: 1.25;
+    }
+    .form-check-input:checked{
+      background-color: #ef5350;
+      border-color: #ef5350;
+    }
+   
+    hr{
+      margin: 0;
+    }
+    ul{
+      margin: 0;
+    }
+    
+   

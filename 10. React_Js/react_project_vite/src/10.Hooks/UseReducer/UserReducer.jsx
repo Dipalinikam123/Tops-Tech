@@ -10,11 +10,9 @@ export default function UserReducer() {
     console.log("action", action);
     if (action.actionType === "email") {
       return { email: action.email };
-    } 
-    else if (action.actionType === "password") {
+    } else if (action.actionType === "password") {
       return { password: action.password };
-    } 
-    else {
+    } else {
       return state;
     }
   }
@@ -25,11 +23,12 @@ export default function UserReducer() {
   const getDataPass = (e) => {
     dispatch({ actionType: "password", password: e?.target?.value });
   };
-   
-  const submitHandler=()=>{
-    setArr([...arr,user])
-  }
-  
+
+  const submitHandler = () => {
+    setArr([...arr, user]);
+    dispatch({  email: "" , password: "" });
+  };
+
   return (
     <>
       <h1>Email is {user?.email}</h1>
@@ -38,7 +37,7 @@ export default function UserReducer() {
         placeholder="Enter Email"
         onChange={(e) => getData(e)}
       />
-      <Button onClick={()=>submitHandler()}>add Email</Button>
+      <Button onClick={() => submitHandler()}>add Email</Button>
       <br />
       <br />
 
@@ -48,18 +47,16 @@ export default function UserReducer() {
         placeholder="Enter password"
         onChange={(e) => getDataPass(e)}
       />
-      <Button onClick={()=>submitHandler()}>add Password</Button> 
+      <Button onClick={() => submitHandler()}>add Password</Button>
 
-      {
-        arr.map((e,i)=>{
-            return (
-              <>
-              <h1>Email is:-{e.email}</h1>
-              <h1>PassWord is:-{e.password}</h1>
-              </>
-            )
-        })
-      }
+      {arr.map((e, i) => {
+        return (
+          <>
+            {e.email && <h1>Email is: {e.email}</h1>}
+            {e.password && <h1>Password is: {e.password}</h1>}
+          </>
+        );
+      })}
     </>
   );
 }

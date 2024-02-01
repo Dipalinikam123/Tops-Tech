@@ -16,9 +16,7 @@ export default function Admin() {
     //optimize code
     let normalData=(JSON.parse(localStorage.getItem("newuser") || "[]"));
     setAdminData(normalData)
-
-   
-  }, []);
+  }, [regModal]);
 
   function showPasswordHandler(i) {
     console.log("🚀 ~ file: MultipleShow.jsx:75 ~ showPasswordHandler ~ i:", i);

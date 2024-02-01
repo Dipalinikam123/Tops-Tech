@@ -25,7 +25,7 @@ export default function TablePrintApi({
   return (
     <>
       <div style={{ width: "100%" }}>
-        <Table className="border border-2 border-dark">
+        <Table className="border border-2 border-dark border-rounded-1">
           <thead>
             <tr>
               <th>Sr No.</th>
@@ -46,11 +46,11 @@ export default function TablePrintApi({
           </thead>
           <tbody>
             {allData?.map((e, i) => {
-                const isExpanded = e?._id === expandedId;
-                console.log("🚀 ~  e?._id === expandedI:",  e?._id === expandedId)
-                console.log("🚀 ~ expandedId:", expandedId)
-                console.log("🚀 ~ {allData?.map ~ e?._id:", e?._id)
-                console.log("🚀 ~ {allData?.map ~ isExpanded:", isExpanded)
+              const isExpanded = e?._id === expandedId;
+              console.log("🚀 ~  e?._id === expandedI:", e?._id === expandedId);
+              console.log("🚀 ~ {allData?.map ~ isExpanded:", isExpanded);
+              console.log("🚀 ~ {allData?.map ~ e?._id:", e?._id);
+              console.log("🚀 ~ expandedId:", expandedId);
               return (
                 <tr key={e?._id}>
                   <td>{i + 1}</td>
@@ -72,11 +72,12 @@ export default function TablePrintApi({
                     <img style={{ width: "100px" }} src={e?.thumbnail} />
                   </td>
                   <td>{e?.title}</td>
+
                   <td>
                     <div
                       style={{
                         maxWidth: "150px",
-                        whiteSpace: isExpanded? "unset": "nowrap",
+                        whiteSpace: isExpanded ? "unset" : "nowrap",
                         overflow: "hidden",
                         textOverflow: isExpanded ? "unset" : "ellipsis",
                       }}
@@ -85,26 +86,23 @@ export default function TablePrintApi({
                       {e?.description}
                     </div>
                   </td>
+
                   <td>{e?.brand}</td>
                   <td>{e?.gender}</td>
-                  <td style={{ maxWidth: "150px" }}>
-                    <Button className="mb-2 bg-primary border-primary">
-                      Price:{e?.price}
-                    </Button>
-                    {  e?.discountPercentage &&
-                    <>
-                    <Button className="mb-2 bg-success border-success">
-                      Dis:{e?.discountPercentage}
-                    </Button>
-                    <Button className="mb-2 bg-danger border-danger">
-                      Total:
-                      {calculateDiscountedPrice(
-                        e?.price,
-                        e?.discountPercentage
-                      ).toFixed(2)}
-                    </Button>
-                    </>
-                    }
+                  <td>
+                    Price: {e?.price}
+                    {e?.discountPercentage && (
+                      <>
+                        <div className="mb-1 mt-1 p-1 border text-light text-center rounded-5 bg-success border-success">
+                          {e?.discountPercentage} %
+                        </div>
+                        Total:
+                        {calculateDiscountedPrice(
+                          e?.price,
+                          e?.discountPercentage
+                        ).toFixed(2)}
+                      </>
+                    )}
                   </td>
                   <td>
                     <div
@@ -123,35 +121,48 @@ export default function TablePrintApi({
                   <td>
                     <div
                       style={{
-                        display: "flex",
-                        gap: "20px",
+                        maxWidth: "150px",
                       }}
                     >
                       {e?.color.map((e, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            width: "12px",
-                            height: "12px",
-                            backgroundColor: e,
-                            marginRight: "5px",
-                            border: "1px solid black",
-                            borderRadius: "50%",
-                          }}
-                        ></div>
+                        <div className="d-flex align-items-center">
+                          <div
+                            key={i}
+                            style={{
+                              width: "12px",
+                              height: "12px",
+                              backgroundColor: e,
+                              marginRight: "5px",
+                              border: "1px solid black",
+                              borderRadius: "50%",
+                            }}
+                          ></div>
+                          <div>{e}</div>
+                        </div>
                       ))}
                     </div>
-                    {e?.color.join(",")}
+                    {/* {e?.color.join(",")} */}
                   </td>
 
                   <td>
-                    <div style={{ display: "grid", gridTemplateColumns:"repeat(2, 1fr)", gap: "5px" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        // gridTemplateColumns: "repeat(2, 1fr)",
+                        gap: "5px",
+                      }}
+                    >
                       {["42", "43", "44", "45"]?.map((size, i) => (
                         <div key={i}>
-                          <Button
-                            className={`${e?.size.includes(size) ? "bg-dark" : "bg-muted"}`}>
+                          <div
+                            className={`${
+                              e?.size.includes(size)
+                                ? "text-dark fw-bold"
+                                : "text-muted"
+                            }`}
+                          >
                             {size}
-                          </Button>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -164,8 +175,4 @@ export default function TablePrintApi({
       </div>
     </>
   );
-}
-
-{
-  /* {e?.size.join(",")} */
 }
