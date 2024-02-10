@@ -5,10 +5,10 @@ int main()
    int area,length,width;
    
    printf("Length of rectangle:-");
-   scanf("%d",&length);
+   scanf("%d",& length);
    
    printf("Width of rectangle:-");
-   scanf("%d",&width);
+   scanf("%d",& width);
    
    area=length*width;
    

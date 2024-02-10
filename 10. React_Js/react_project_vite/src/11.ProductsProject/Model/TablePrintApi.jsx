@@ -47,10 +47,10 @@ export default function TablePrintApi({
           <tbody>
             {allData?.map((e, i) => {
               const isExpanded = e?._id === expandedId;
-              console.log("🚀 ~  e?._id === expandedI:", e?._id === expandedId);
-              console.log("🚀 ~ {allData?.map ~ isExpanded:", isExpanded);
-              console.log("🚀 ~ {allData?.map ~ e?._id:", e?._id);
-              console.log("🚀 ~ expandedId:", expandedId);
+              // console.log("🚀 ~  e?._id === expandedI:", e?._id === expandedId);
+              // console.log("🚀 ~ {allData?.map ~ isExpanded:", isExpanded);
+              // console.log("🚀 ~ {allData?.map ~ e?._id:", e?._id);
+              // console.log("🚀 ~ expandedId:", expandedId);
               return (
                 <tr key={e?._id}>
                   <td>{i + 1}</td>
