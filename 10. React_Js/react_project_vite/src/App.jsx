@@ -2,6 +2,7 @@
 import ListView from './01. Assignment/ListView'
 import UseState from './01. Assignment/UseState'
 import Webpage from './02.Styling_Assignment/Webpage'
+import AnalogClock from './03. ClassTasK/AnalogClock/AnalogClock'
 import MultiplePasswordShow from './03. ClassTasK/MultiplePasswordShow'
 import ToDoList from './03. ClassTasK/TodoList/ToDoList'
 import UseEffect from './10.Hooks/UseEffect/UseEffect'
@@ -17,6 +18,7 @@ import CheckBoxValue from './7.Input/CheckBoxValue'
 import FullCurdFun from './7.Input/FullCurdFun'
 import RadioButtonCurd from './7.Input/RadioButtonCurd'
 import LifeCycle from './8.LifeCycle/LifeCycle'
+import LifeCycleTask from './8.LifeCycle/LifeCycleTask'
 import RouterPage from './9.Router/RouterPage'
 import './App.css'
 
@@ -28,7 +30,8 @@ function App() {
     {/* <UseState/> */}
     {/* </div> */}
     {/* =================================== */}
-        <LifeCycle/>
+        {/* <LifeCycle/> */}
+        {/* <LifeCycleTask/> */}
     {/* =================================== */}
     {/* <Webpage/> */}
     {/* =================================== */}
@@ -57,6 +60,8 @@ function App() {
     {/* ===================================== */}
     {/* <UseEffect/> */}
     {/* <UseEffectProblem/> */}
+    {/* ===================================== */}
+    <AnalogClock/>
     </>
   )
 }
