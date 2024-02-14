@@ -13,6 +13,8 @@ import UseReducer from './10.Hooks/UseReducer/UseReducer'
 import UserReducer from './10.Hooks/UseReducer/UserReducer'
 import ProductApiRouter from './11.ProductsProject/ProductApiRouter'
 import ReduxApp from './12.Redux/ReduxApp'
+import TaskRouter from './14. TaskRouter.jsx/TastRouter/TaskRouter'
+import Router from './16. PavanPatil/Router3/Router'
 import CheckBoxValue from './7.Input/CheckBoxValue'
 // import ToDoList from './03. ClassTasK/ToDoList'
 import FullCurdFun from './7.Input/FullCurdFun'
@@ -44,6 +46,7 @@ function App() {
     {/* <MultiplePasswordShow/> */}
     {/* ===================================== */}
     {/* <RouterPage/> */}
+    <TaskRouter/>
       {/* <ProductApiRouter/> */}
     {/* ===================================== */}
     {/* <RadioButtonCurd/> */}
@@ -61,7 +64,11 @@ function App() {
     {/* <UseEffect/> */}
     {/* <UseEffectProblem/> */}
     {/* ===================================== */}
-    <AnalogClock/>
+    {/* <AnalogClock/> */}
+
+
+
+    {/* <Router/> */}
     </>
   )
 }

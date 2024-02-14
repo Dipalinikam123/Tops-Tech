@@ -30,7 +30,7 @@ export default function AdminAddUserF({ modal, toggle }) {
     console.log("newUser========",newuser)
     e.preventDefault();
 
-            //get old data from localstorage
+     //get old data from localstorage
     // let oldData= localStorage.getItem("newuser")  direcrtly write in parse
     // console.log("old",oldData)// string
     let oldDataConvert=JSON.parse(localStorage.getItem("newuser")) || []  //convert to array of oject

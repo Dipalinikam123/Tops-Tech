@@ -21,7 +21,7 @@ Q.3• What is the difference between CSS2 and CSS3?
 
 anser=   css-2=>
 
-1.      CSS is capable of positioning texts and objects. 
+1.CSS is capable of positioning texts and objects. 
 2	Responsive designing is not supported in CSS
 3	CSS cannot be split into modules.
 4	Using CSS, we cannot build 3D animation and transformation.
