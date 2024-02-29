@@ -1,4 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+
+
 
  const inputSlice = createSlice({
     name:"user",
@@ -10,7 +13,7 @@ import { createSlice } from "@reduxjs/toolkit";
             
         },
         deleteHandeler: (state,action)=>{
-            state.user.pop(  action.payload)
+            state.user.pop(action.payload)
         },
         upadateButton:(state,action) => {
             console.log("🚀 ~update ======= action:", action)
@@ -18,8 +21,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
               const payload = action.payload;
               state.user[payload.index] = payload.userInput;
-        }
-        
+        }   
+    },
+    extraReducers:(builder)=>{
+        builder.addCase(userFetch.fulfilled,(state,action) => {
+            console.log("🚀 ~ builder.addCase ~ action:", action)
+            // return state.user =
+        	// }
+        });
+
     }
 })
 

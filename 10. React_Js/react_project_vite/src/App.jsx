@@ -1,4 +1,5 @@
 
+import MainFile from './001.ChartBar/MainFile'
 import ListView from './01. Assignment/ListView'
 import UseState from './01. Assignment/UseState'
 import Webpage from './02.Styling_Assignment/Webpage'
@@ -14,7 +15,7 @@ import UserReducer from './10.Hooks/UseReducer/UserReducer'
 import ProductApiRouter from './11.ProductsProject/ProductApiRouter'
 import ReduxApp from './12.Redux/ReduxApp'
 import TaskRouter from './14. TaskRouter.jsx/TastRouter/TaskRouter'
-import Router from './16. PavanPatil/Router3/Router'
+import ReduxApiRouter from './15.ReduxApi/ReduxApiRouter'
 import CheckBoxValue from './7.Input/CheckBoxValue'
 // import ToDoList from './03. ClassTasK/ToDoList'
 import FullCurdFun from './7.Input/FullCurdFun'
@@ -45,7 +46,7 @@ function App() {
     {/* =================================== */}
     {/* <MultiplePasswordShow/> */}
     {/* ===================================== */}
-    <RouterPage/>
+    {/* <RouterPage/> */}
     {/* <TaskRouter/> */}
       {/* <ProductApiRouter/> */}
     {/* ===================================== */}
@@ -60,15 +61,18 @@ function App() {
       {/* <CheckBoxValue/> */}
     {/* ===================================== */}
       {/* <ReduxApp/> */}
+          <ReduxApiRouter/>
     {/* ===================================== */}
     {/* <UseEffect/> */}
     {/* <UseEffectProblem/> */}
     {/* ===================================== */}
     {/* <AnalogClock/> */}
 
+    {/* <MainFile/> */}
 
 
-    {/* <Router/> */}
+
+
     </>
   )
 }

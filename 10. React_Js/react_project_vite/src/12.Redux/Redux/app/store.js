@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import countReducer from "../Feature/Count/counter"
 import pointReducer from "../Feature/point/Point1"
 import amountReducer from '../Feature/Amount/Amount'
-import inputReducer from "../Feature/Input/InputFormCurd"
+import inputReducer from "../../../15.ReduxApi/ReduxApi2/Feature1/Input/InputFormCurd"
 
 export const store = configureStore({
     reducer:{
