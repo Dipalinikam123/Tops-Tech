@@ -16,6 +16,8 @@ import ProductApiRouter from './11.ProductsProject/ProductApiRouter'
 import ReduxApp from './12.Redux/ReduxApp'
 import TaskRouter from './14. TaskRouter.jsx/TastRouter/TaskRouter'
 import ReduxApiRouter from './15.ReduxApi/ReduxApiRouter'
+import FormV1 from './16.MediaNV-Task/Form1/FormV1'
+import Accordion from './17.Assessment/Accordion'
 import CheckBoxValue from './7.Input/CheckBoxValue'
 // import ToDoList from './03. ClassTasK/ToDoList'
 import FullCurdFun from './7.Input/FullCurdFun'
@@ -61,15 +63,17 @@ function App() {
       {/* <CheckBoxValue/> */}
     {/* ===================================== */}
       {/* <ReduxApp/> */}
-          <ReduxApiRouter/>
+          {/* <ReduxApiRouter/> */}
     {/* ===================================== */}
     {/* <UseEffect/> */}
     {/* <UseEffectProblem/> */}
     {/* ===================================== */}
     {/* <AnalogClock/> */}
-
     {/* <MainFile/> */}
+    {/* ======================================== */}
 
+      {/* <FormV1/> */}
+      <Accordion/>
 
 
 

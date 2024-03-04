@@ -23,14 +23,14 @@ import axios from "axios";
               state.user[payload.index] = payload.userInput;
         }   
     },
-    extraReducers:(builder)=>{
-        builder.addCase(userFetch.fulfilled,(state,action) => {
-            console.log("🚀 ~ builder.addCase ~ action:", action)
-            // return state.user =
-        	// }
-        });
+    // extraReducers:(builder)=>{
+    //     builder.addCase(userFetch.fulfilled,(state,action) => {
+    //         console.log("🚀 ~ builder.addCase ~ action:", action)
+    //         // return state.user =
+    //     	// }
+    //     });
 
-    }
+    // }
 })
 
 export default inputSlice.reducer
