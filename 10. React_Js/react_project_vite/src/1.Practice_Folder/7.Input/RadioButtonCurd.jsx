@@ -52,7 +52,7 @@ export default function RadioButtonCurd() {
   }
 
   function deleteItem(index) {
-    let filterData = arr.filter((e, i) => i !== index);
+    let filterData = arr?.filter((e, i) => i !== index);
     confirm("are youu sure") && setArr(filterData);
     localStorage.setItem("dataArray", JSON.stringify(filterData));
   }

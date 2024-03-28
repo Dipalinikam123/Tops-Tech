@@ -1,0 +1,16 @@
+.story-content{
+    /* width: 200px; */
+    height: 350px;
+    border: 2px solid black;
+}
+.rating-flow{
+    height: 300px;
+    overflow: auto;
+}
+input:focus{
+    outline: none;
+    border: 1px solid;
+}
+input{
+    border: 1px solid;
+}

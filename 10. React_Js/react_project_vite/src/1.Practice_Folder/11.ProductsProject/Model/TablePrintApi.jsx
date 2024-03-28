@@ -25,7 +25,7 @@ export default function TablePrintApi({
   return (
     <>
       <div style={{ width: "100%" }}>
-        <Table className="border border-2 border-dark border-rounded-1">
+        <Table className=" border border-2 border-dark border-rounded-1">
           <thead>
             <tr>
               <th>Sr No.</th>

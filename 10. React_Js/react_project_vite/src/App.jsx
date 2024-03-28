@@ -40,6 +40,7 @@ import Calculator from "./7.Calculator/Calculator";
 import SocialMedia from "./8.Social_Media/SocialMedia";
 import MainFileReview from "./9.Interview/MainFileReview";
 import ReviewMainFile from "./9.Interview/TaskReview/ReviewMainFile";
+import StoryShowPage from "./9.Interview/FinalTake/StoryShowPage";
 
 import "./App.css";
 
@@ -111,7 +112,8 @@ function App() {
       {/* ==================CLASSTASK=================== */}
         {/* <InputDataTask/> */}
         {/* <MultiplePasswordShow/> */}
-        <MainFile />
+        {/* <MainFile /> */}
+        <StoryShowPage/>
 
       {/* ===============TODOLIST==================== */}
       {/* <ToDoList /> */}
