@@ -86,8 +86,8 @@ export default function PendingTask({
 
   return (
     <>
-      <div className="content w-100">
-        <div className="notebook-page">
+      <div className="content w-100 row">
+        <div className="notebook-page col-sm-12">
           <div
             style={{
               padding:"15px",

@@ -119,8 +119,8 @@ export default function DoneTask({ page, setPage, addData, setAddData }) {
   };
   return (
     <>
-      <div className="content">
-        <div className="notebook-page">
+      <div className="content row">
+        <div className="notebook-page col-sm-10 ">
           <div  style={{
             padding:"15px",
               width: "100%",
