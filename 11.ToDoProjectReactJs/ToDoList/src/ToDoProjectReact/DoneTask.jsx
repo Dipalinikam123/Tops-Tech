@@ -120,10 +120,10 @@ export default function DoneTask({ page, setPage, addData, setAddData }) {
   return (
     <>
       <div className="content row">
-        <div className="notebook-page col-sm-10 ">
+        <div className="notebook-page  ">
           <div  style={{
             padding:"15px",
-              width: "100%",
+             width: "100%",
               display: "flex",
               justifyContent: "space-between",
               marginBottom: "13px",

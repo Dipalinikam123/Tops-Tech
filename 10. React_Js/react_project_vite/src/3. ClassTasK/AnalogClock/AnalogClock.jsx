@@ -15,7 +15,7 @@ export default function AnalogClock() {
   return (
     <>
     <div className='d-flex  justify-content-center '>
-    <h3>{cDate}</h3>
+    <h3 className='mt-5'>{cDate}</h3>
     </div>
     <div className="clock">
         <div className="hour_hand"

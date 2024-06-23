@@ -10,7 +10,7 @@ export default function Car() {
     <div>
       <Button className='m-3 bg-danger border border-danger' onClick={()=>navigate("/service")}>Back to Service</Button>
         <h1>Car</h1>
-        <img src={image} alt="" />
+        <img className='mw-100' src={image} alt="" />
     </div>
   )
 }

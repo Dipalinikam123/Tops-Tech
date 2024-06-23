@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { ArrowUpToLine, CheckCircle } from "lucide-react";
 import { Input, Table } from "reactstrap";
-import './indexToDo.css'
+import "./indexToDo.css";
 
 export default function ToDoList() {
   let lineRef = useRef();
@@ -12,8 +12,8 @@ export default function ToDoList() {
   let [index, setIndex] = useState(null);
   let [userArr, setUserArr] = useState([]);
   let [buttn, setButn] = useState(false);
-  let [check, setCheck] = useState([])
-  let [checkArr, setCheckArr] = useState([])
+  let [check, setCheck] = useState([]);
+  let [checkArr, setCheckArr] = useState([]);
 
   useEffect(() => {
     const data = localStorage.getItem("fullData");
@@ -67,7 +67,7 @@ export default function ToDoList() {
 
   function handleCheckboxChange(item) {
     if (check.includes(item)) {
-      let updatedCheck = check.filter(e => e !== item); //check.map(()) setCheck([...check]) try
+      let updatedCheck = check.filter((e) => e !== item); //check.map(()) setCheck([...check]) try
       setCheck(updatedCheck);
     } else {
       setCheck([...check, item]);
@@ -75,8 +75,8 @@ export default function ToDoList() {
   }
 
   function checkeed() {
-    console.log("====check", check)
-    setCheckArr([...checkArr, check])
+    console.log("====check", check);
+    setCheckArr([...checkArr, check]);
   }
 
   return (
@@ -97,13 +97,21 @@ export default function ToDoList() {
           />
 
           {buttn ? (
-            <button className="btn" onClick={() => updateTextInput()}> $ </button>
+            <button className="btn" onClick={() => updateTextInput()}>
+              {" "}
+              ${" "}
+            </button>
           ) : (
-            <button className="btn" onClick={() => getDataBtn()}> + </button>
+            <button className="btn" onClick={() => getDataBtn()}>
+              {" "}
+              +{" "}
+            </button>
           )}
 
           <div className="box-2">
-            <button className="btn5" onClick={checkeed}>Checked</button>
+            <button className="btn5" onClick={checkeed}>
+              Checked
+            </button>
           </div>
           <Table>
             <tbody>
@@ -128,7 +136,8 @@ export default function ToDoList() {
                       />
                     </td>
                     <td>
-                      <Input check
+                      <Input
+                        check
                         type="checkbox"
                         id="checkbox1"
                         onChange={() => handleCheckboxChange(e)}
@@ -143,32 +152,27 @@ export default function ToDoList() {
 
         <div className="tableDiv w-25">
           <Table>
-
-          <thead>
-                    <tr>
-                        <th>
-                           checked List
-                        </th>
-                      </tr>
+            <thead>
+              <tr>
+                <th>checked List</th>
+              </tr>
             </thead>
             <tbody>
-
-              { checkArr?.length === 0 ? (
+              {checkArr?.length === 0 ? (
                 <tr>
-                    <td colSpan="9" style={{ textAlign: "center" }}>
-                        Data not Found
-                    </td>
+                  <td colSpan="9" style={{ textAlign: "center" }}>
+                    Data not Found
+                  </td>
                 </tr>
-                ): (
-                    checkArr?.map((e, i) => {
-                      return (
-                        <tr key={i}>
-                          <td  style={{ textAlign: "center" }}>{e.join('-')} </td>
-                        </tr>
-                      );
-                      })
-              )
-            }
+              ) : (
+                checkArr?.map((e, i) => {
+                  return (
+                    <tr key={i}>
+                      <td style={{ textAlign: "center" }}>{e.join("-")} </td>
+                    </tr>
+                  );
+                })
+              )}
             </tbody>
           </Table>
         </div>

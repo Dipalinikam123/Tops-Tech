@@ -19,7 +19,7 @@ export default function Service() {
             }}>CAR</Button></NavLink></li>
         </ul>
 
-        <img src={image} alt="" />
+        <img className='mw-100' src={image} alt="" />
     </div>
   )
 }

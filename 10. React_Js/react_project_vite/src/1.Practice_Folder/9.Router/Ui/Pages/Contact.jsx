@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div>
         <h1>Contact</h1>
-        <img src={image} alt="" className='w-50 m-4'  />
+        <img src={image} alt="" className='mw-100 my-4'  />
     </div>
   )
 }

@@ -16,13 +16,13 @@ export default function Calculator() {
     }
     else{
       let display = calVal + button
-      setCalVal(display)
+      setCalVal(display) //to display 1st we click item
     }
   }
 
   return (
-    <div className="w-100 d-flex flex-column align-items-center mt-5">
-      <h2>CALCULATOR</h2>
+    <div className="w-100 d-flex flex-wrap flex-column align-items-center mt-5">
+      <h2 className="mb-4">CALCULATOR</h2>
       <div className="w-25 border border-2 rounded-3 border-dark p-3 ">
 
         <Input calVal={calVal} />

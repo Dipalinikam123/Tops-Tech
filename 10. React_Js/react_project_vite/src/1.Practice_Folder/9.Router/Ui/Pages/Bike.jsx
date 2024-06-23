@@ -11,7 +11,7 @@ export default function Bike() {
     <div>
       <Button className='m-3 bg-danger border border-danger' onClick={()=>navigate("/service")}>Back to Service</Button>
         <h1>Bike</h1>
-        <img src={image} alt="" className='w-50'/>
+        <img  src={image} alt="" className='mw-50'/>
         </div>
   );
 }

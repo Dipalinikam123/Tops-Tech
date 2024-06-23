@@ -43,6 +43,9 @@ import ReviewMainFile from "./9.Interview/TaskReview/ReviewMainFile";
 import StoryShowPage from "./9.Interview/FinalTake/StoryShowPage";
 
 import "./App.css";
+import TicTacToe from "./10.TicTacToe/TicTacToe";
+import SmartWatch from "./3. ClassTasK/SmartWatch/SmartWatch";
+import CounterStop from "./9.Interview/CounterStop/CounterStop";
 
 function App() {
  
@@ -99,6 +102,7 @@ function App() {
 
       {/* ===============CLOCK====================== */}
       {/* <AnalogClock /> */}
+      {/* <SmartWatch/> */}
 
       {/* =================REDUX==================== */}
       {/* <ReduxApp /> */}
@@ -113,7 +117,7 @@ function App() {
         {/* <InputDataTask/> */}
         {/* <MultiplePasswordShow/> */}
         {/* <MainFile /> */}
-        <StoryShowPage/>
+        {/* <StoryShowPage/> */}
 
       {/* ===============TODOLIST==================== */}
       {/* <ToDoList /> */}
@@ -127,7 +131,9 @@ function App() {
        {/* <Calculator/> */}
 
        {/* <SocialMedia/> */}
+       <CounterStop/>
      
+     {/* <TicTacToe/> */}
     </>
   );
 }

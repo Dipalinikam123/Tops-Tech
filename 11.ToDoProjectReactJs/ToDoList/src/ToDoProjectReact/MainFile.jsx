@@ -71,7 +71,7 @@ export default function MainFile() {
 
   return (
     <>
-<div className="h-auto pt-5 pb-5 w-100" style={{background: "linear-gradient(90deg, rgba(106,137,215,0.46551120448179273) 0%, rgba(247,124,176,1) 100%)"}}>
+<div className="h-auto pt-5 pb-5 mw-100" style={{background: "linear-gradient(90deg, rgba(106,137,215,0.46551120448179273) 0%, rgba(247,124,176,1) 100%)"}}>
 
         <div className="w-100 d-flex flex-column  justify-content-center">
             <h2 style={{background:"line"}}  className="text-center text-dark fst-italic fw-bold">
